@@ -5,20 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Back End Code\*
+- Front End found [Here]
 
-* System dependencies
+Structure ->
 
-* Configuration
+Fantasy Team will have many Players
+Players belong to an NBA team
+Players belong to Fantasy Team
 
-* Database creation
+Fantasy Team - Name - Players
+Limit of 5 players to start
 
-* Database initialization
+Players - Name > String - Team > String - Fantasy Team ID - Points > Integer - Injured? > Boolean - Image
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+NBA Team - Has logo
