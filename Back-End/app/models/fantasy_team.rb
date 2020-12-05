@@ -1,0 +1,2 @@
+class FantasyTeam < ApplicationRecord
+end

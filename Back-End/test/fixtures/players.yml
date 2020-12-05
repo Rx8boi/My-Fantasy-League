@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  team: MyString
+  fantasy_points: 1
+  injured: false
+  image: MyString
+  fantasy_team: one
+  nba_team: one
+
+two:
+  name: MyString
+  team: MyString
+  fantasy_points: 1
+  injured: false
+  image: MyString
+  fantasy_team: two
+  nba_team: two
