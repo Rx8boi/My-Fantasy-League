@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+32.times do
+
+    player= Player.new(
+    name: Faker::Sports::Basketball.player,
+    team: Faker::Sports::Basketball.team,
+    position: Faker::Sports::Basketball.position,
+    )
+    
+    player.save
+end
