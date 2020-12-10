@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_032932) do
+ActiveRecord::Schema.define(version: 2020_12_05_031534) do
 
   create_table "fantasy_teams", force: :cascade do |t|
     t.string "name"
@@ -30,18 +30,12 @@ ActiveRecord::Schema.define(version: 2020_12_06_032932) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.string "team"
-    t.integer "fantasy_points"
-    t.boolean "injured"
+    t.string "position"
     t.string "image"
-    t.integer "fantasy_team_id", null: false
-    t.integer "nba_team_id", null: false
+    t.boolean "injured"
+    t.integer "fantasy_points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "position"
-    t.index ["fantasy_team_id"], name: "index_players_on_fantasy_team_id"
-    t.index ["nba_team_id"], name: "index_players_on_nba_team_id"
   end
 
-  add_foreign_key "players", "fantasy_teams"
-  add_foreign_key "players", "nba_teams"
 end

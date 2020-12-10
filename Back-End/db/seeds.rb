@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Player.create(name:"Ben Simmons", team: "Philadelphia 76ers", position: "Point Guard", image: "./player_img/simmobe01.jpg", injured: false, fantasy_points: 57)
 Player.create([
 {
      name: "Ben Simmons",
@@ -96,7 +96,6 @@ Player.create([
      injured: false,
      fantasy_points:62,
 
-
 },
  {
      name:"Luka Doncic",
@@ -142,8 +141,7 @@ Player.create([
      injured: false,
      fantasy_points:67,
 
-}
-])
+}])
 
 NbaTeam.create([
 

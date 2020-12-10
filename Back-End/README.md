@@ -14,8 +14,9 @@ Fantasy Team will have many Players
 Players belong to an NBA team
 Players belong to Fantasy Team
 
-Fantasy Team - Name - Players
+Fantasy Team - Name string - Players
 Limit of 5 players to start
+-Bench: integer
 
 Players - Name > String - Team > String - Fantasy Team ID - Points > Integer - Injured? > Boolean - Image
 
