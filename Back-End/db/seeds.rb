@@ -5,156 +5,156 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Nbanba_team.create([
+NbaTeam.create([
 
 {  #1
     name:"Atlanta Hawks",
-    image:"./nba_nba_teams_img/hawks.png",
+    image:"./nba_teams_img/hawks.png",
 
 },
 {  #2
     name:"Boston Celtics",
-    image:"./nba_nba_teams_img/celtics.png",
+    image:"./nba_teams_img/celtics.png",
 
 },
 {  #3
     name:"Brooklyn Nets",
-    image:"./nba_nba_teams_img/nets.png",
+    image:"./nba_teams_img/nets.png",
 
 },
 {   #4
     name:"Charlotte Hornets",
-    image:"./nba_nba_teams_img/charlotte-hornets.png",
+    image:"./nba_teams_img/charlotte-hornets.png",
 
 },
 {   #5
     name:"Chicago Bulls",
-    image:"./nba_nba_teams_img/bulls.png",
+    image:"./nba_teams_img/bulls.png",
 
 },
 {   #6
     name:"Cleveland Cavaliers",
-    image:"./nba_nba_teams_img/cavaliers.png",
+    image:"./nba_teams_img/cavaliers.png",
 
 },
 {   #7
     name:"Dallas Mavericks",
-    image:"./nba_nba_teams_img/mavericks.png",
+    image:"./nba_teams_img/mavericks.png",
 
 },
 {   #8
     name:"Denver Nuggets",
-    image:"./nba_nba_teams_img/nuggets.png",
+    image:"./nba_teams_img/nuggets.png",
 
 },
 {   #9
     name:"Detroit Pistons",
-    image:"./nba_nba_teams_img/pistons.png",
+    image:"./nba_teams_img/pistons.png",
 
 },
 {   #10
     name:"Golden State Warriors",
-    image:"./nba_nba_teams_img/warriors.png",
+    image:"./nba_teams_img/warriors.png",
 
 },
 {   #11
     name:"Houston Rockets",
-    image:"./nba_nba_teams_img/rockets.png",
+    image:"./nba_teams_img/rockets.png",
 
 },
 {   #12
     name:"Indiana Pacers",
-    image:"./nba_nba_teams_img/pacers.png",
+    image:"./nba_teams_img/pacers.png",
 
 },
 {   #13
     name:"Los Angeles Clippers",
-    image:"./nba_nba_teams_img/clippers.png",
+    image:"./nba_teams_img/clippers.png",
 
 },
 {   #14
     name:"Los Angeles Lakers",
-    image:"./nba_nba_teams_img/lakers.png",
+    image:"./nba_teams_img/lakers.png",
 
 },
 {   #15
     name:"Memphis Grizzlies",
-    image:"./nba_nba_teams_img/grizzlies.png",
+    image:"./nba_teams_img/grizzlies.png",
 
 },
 {   #16
     name:"Miami Heat",
-    image:"./nba_nba_teams_img/heat.png",
+    image:"./nba_teams_img/heat.png",
 
 },
 {   #17
     name:"Milwaukee Bucks",
-    image:"./nba_nba_teams_img/bucks.png",
+    image:"./nba_teams_img/bucks.png",
 
 },
 {   #18
     name:"Minnesota Timberwolves",
-    image:"./nba_nba_teams_img/timberwolves.png",
+    image:"./nba_teams_img/timberwolves.png",
 
 },
 {   #19
     name:"New Orleans Pelicans",
-    image:"./nba_nba_teams_img/pelicans.png",
+    image:"./nba_teams_img/pelicans.png",
 
 },
 {   #20
     name:"New York Knicks",
-    image:"./nba_nba_teams_img/knicks.png",
+    image:"./nba_teams_img/knicks.png",
 
 },
 {   #21
     name:"Oklahoma City Thunder",
-    image:"./nba_nba_teams_img/thunder.png",
+    image:"./nba_teams_img/thunder.png",
 
 },
 {   #22
     name:"Orlando Magic",
-    image:"./nba_nba_teams_img/magic.png",
+    image:"./nba_teams_img/magic.png",
 
 },
 {   #23
     name:"Philadelphia 76ers",
-    image:"./nba_nba_teams_img/76ers.png",
+    image:"./nba_teams_img/76ers.png",
 
 },
 {   #24
     name:"Phoenix Suns",
-    image:"./nba_nba_teams_img/suns.png",
+    image:"./nba_teams_img/suns.png",
 
 },
 {   #25
     name:"Portland Trail Blazers",
-    image:"./nba_nba_teams_img/trail_blazers.png",
+    image:"./nba_teams_img/trail_blazers.png",
 
 },
 {   #26
     name:"Sacramento Kings",
-    image:"./nba_nba_teams_img/kings.png",
+    image:"./nba_teams_img/kings.png",
 
 },
 {   #27
     name:"San Antonio Spurs",
-    image:"./nba_nba_teams_img/spurs.png",
+    image:"./nba_teams_img/spurs.png",
 
 },
 {   #28
     name:"Toronto Raptors",
-    image:"./nba_nba_teams_img/raptors.png",
+    image:"./nba_teams_img/raptors.png",
 
 },
 {   #29
     name:"Utah Jazz",
-    image:"./nba_nba_teams_img/jazz.png",
+    image:"./nba_teams_img/jazz.png",
 
 },
 {   #30
     name:"Washington Wizards",
-    image:"./nba_nba_teams_img/wizzards.png",
+    image:"./nba_teams_img/wizzards.png",
 
 }])
 
@@ -167,7 +167,7 @@ Player.create([
      fantasy_points: 57,
      injured: [true, false].sample,
      image: "./player_img/simmobe01.jpg",
-     nba_team: 23,
+     #nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -176,7 +176,7 @@ Player.create([
      fantasy_points:60,
      image: "./player_img/siakapa01.jpg",
      injured: [true, false].sample,
-     nba_team: 28,
+     #nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -185,7 +185,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/bealbr01.jpg",
      injured: [true, false].sample,
-     nba_team:30,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -194,7 +194,7 @@ Player.create([
      fantasy_points:66,
      image:"./player_img/tatumja01.jpg",
      injured: [true, false].sample,
-     nba_team: 2,
+     #nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -203,7 +203,7 @@ Player.create([
      fantasy_points:60,
      image:"./player_img/youngtr01.jpg",
      injured: [true, false].sample,
-     nba_team:1,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -212,7 +212,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/westbru01.jpg",
      injured: [true, false].sample,
-     nba_team:11,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -221,7 +221,7 @@ Player.create([
      fantasy_points:51,
      image:"./player_img/embiijo01.jpg",
      injured: [true, false].sample,
-     nba_team:23,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -230,7 +230,7 @@ Player.create([
      fantasy_points:66,
      image:"./player_img/lillada01.jpg",
      injured: [true, false].sample,
-     nba_team:25,
+     #nba_team_id:NbaTeam.all.sample,
     
 },
  {
@@ -239,7 +239,7 @@ Player.create([
      fantasy_points:73,
      image:"./player_img/jokicni01.jpg",
      injured: [true, false].sample,
-     nba_team:8,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -248,7 +248,7 @@ Player.create([
      fantasy_points:62,
      image:"./player_img/davisan02.jpg",
      injured: [true, false].sample,
-     nba_team:14,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -257,7 +257,7 @@ Player.create([
      fantasy_points:61,
      image:"./player_img/doncilu01.jpg",
      injured: [true, false].sample,
-     nba_team:7,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
 {
@@ -266,7 +266,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/leonaka01.jpg",
      injured: [true, false].sample,
-     nba_team:13,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -275,7 +275,7 @@ Player.create([
      fantasy_points:68,
      image:"./player_img/hardeja01.jpg",
      injured: [true, false].sample,
-     nba_team:11,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -284,7 +284,7 @@ Player.create([
      fantasy_points:63,
      image:"./player_img/antetgi01.jpg",
      injured: [true, false].sample,
-     nba_team:17,
+     #nba_team_id:NbaTeam.all.sample,
 
 },
 {
@@ -293,7 +293,7 @@ Player.create([
      fantasy_points:67,
      image:"./player_img/jamesle01.jpg",
      injured: [true, false].sample,
-     nba_team:14,
+     #nba_team_id:NbaTeam.all.sample,
 
 }])
 

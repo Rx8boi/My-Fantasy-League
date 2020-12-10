@@ -1,4 +1,4 @@
 class Player < ApplicationRecord
-  belongs_to :NbaTeam
+  #belongs_to :nba_team
 
 end

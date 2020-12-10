@@ -46,6 +46,6 @@ class NbaTeamsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nba_team_params
-      params.require(:nba_team).permit(:name, :image, :player)
+      params.require(:nba_team).permit(:name, :image)
     end
 end

@@ -29,11 +29,10 @@ ActiveRecord::Schema.define(version: 2020_12_05_031534) do
 
   create_table "players", force: :cascade do |t|
     t.string "name"
-    t.string "team"
     t.string "position"
-    t.string "image"
-    t.boolean "injured"
     t.integer "fantasy_points"
+    t.boolean "injured"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
