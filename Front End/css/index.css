@@ -5,6 +5,6 @@ body {
 
 @font-face {
     font-family: SFSportsNight;
-    src: local(./css/font/SFSportsNight.ttf);
+    src: local("./css/font/SFSportsNight.ttf");
     font-weight: bold;
 }

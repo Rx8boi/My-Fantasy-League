@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+<style>
+    @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+    }
+    
+    * {
+        font-family: myFirstFont;
+    }
+</style>
 
 <head>
     <title>My NBA Fantasy League</title>
-    <link rel="stylesheet" src="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="javascript/models/show.js"></script>
     <script type="text/javascript" src="javascript/services/API.js"></script>
     <script type="text/javascript" src="javascript/index.js"></script>
@@ -12,10 +22,12 @@
 </head>
 
 <body>
-    <h1>Lets put a team together!</h1>
 
+    <h1>Lets put a team together!</h1>
+    <div class="nba_teams_list"></div>
     <div id="hoverText">
         <span title="THIS HOVERS">Here goes the text</span>
+    </div>
     </div>
 </body>
 
