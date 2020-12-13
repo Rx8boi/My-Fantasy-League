@@ -30,13 +30,15 @@ class Player {
 
     // need instance level method to show HTML all contextual
     PlayerHTML() {
+
+        let injury = this.injured == true ? "yes" : "no"
         return `
         <h2 class="Headline">${this.name}</h2>
         <img src = "https://i1.wp.com/basketballsocietyonline.com/wp-content/uploads/2015/03/nba-logo-vector-logo-650193733.jpg?fit=1000%2C1528&ssl=1" style="width:150px;height:200px;">
         </br>
         <h3 class="player_position">${this.position}</h3>
         <p>Fantasy Points: ${this.fantasy_points}</p>
-        <p>Injured? ${this.injured}</p>
+        <p>Injured? ${injury}</p>
         </br>
          `
     }
