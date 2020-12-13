@@ -48,6 +48,7 @@ class Team {
         //Fetch request to Team page gets => scoped Players
         // return Players for team selected
         // show new page with just players & back/forth capabilities (render Teams again)
+        //best place for event listener
     }
 
 }
