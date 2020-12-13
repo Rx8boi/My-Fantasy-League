@@ -9,152 +9,213 @@ NbaTeam.create([
 
 {  #1
     name:"Atlanta Hawks",
-    image:"./nba_teams_img/hawks.png",
+    image:"https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg",
+    website:"https://www.nba.com/hawks/",
+    schedule:"https://www.nba.com/hawks/schedule",
 
 },
 {  #2
     name:"Boston Celtics",
-    image:"./nba_teams_img/celtics.png",
+    image:"https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg",
+    website:"https://www.nba.com/celtics/",
+    schedule:"https://www.nba.com/celtics/schedule",
 
 },
 {  #3
     name:"Brooklyn Nets",
-    image:"./nba_teams_img/nets.png",
+    image:"https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg",
+    website:"https://www.nba.com/nets/",
+    schedule:"https://www.nba.com/nets/schedule",
 
 },
 {   #4
     name:"Charlotte Hornets",
-    image:"./nba_teams_img/charlotte-hornets.png",
+    image:"https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg",
+    website:"https://www.nba.com/hornets/",
+    schedule:"https://www.nba.com/hornets/schedule",
 
 },
 {   #5
     name:"Chicago Bulls",
-    image:"./nba_teams_img/bulls.png",
+    image:"https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg",
+    website:"https://www.nba.com/bulls/",
+    schedule:"https://www.nba.com/bulls/schedule",
 
 },
 {   #6
     name:"Cleveland Cavaliers",
-    image:"./nba_teams_img/cavaliers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg",
+    website:"https://www.nba.com/cavaliers/",
+    schedule:"https://www.nba.com/cavaliers/schedule",
 
 },
 {   #7
     name:"Dallas Mavericks",
-    image:"./nba_teams_img/mavericks.png",
+    image:"https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg",
+    website:"https://www.nba.com/mavericks/",
+    schedule:"https://www.nba.com/mavericks/schedule",
 
 },
 {   #8
     name:"Denver Nuggets",
-    image:"./nba_teams_img/nuggets.png",
+    image:"https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg",
+    website:"https://www.nba.com/nuggets/",
+    schedule:"https://www.nba.com/nuggets/schedule",
 
 },
 {   #9
     name:"Detroit Pistons",
-    image:"./nba_teams_img/pistons.png",
+    image:"https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg",
+    website:"https://www.nba.com/pistons/",
+    schedule:"https://www.nba.com/pistons/schedule",
 
 },
 {   #10
     name:"Golden State Warriors",
-    image:"./nba_teams_img/warriors.png",
+    image:"https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg",
+    website:"https://www.nba.com/warriors/",
+    schedule:"https://www.nba.com/warriors/schedule",
 
 },
 {   #11
     name:"Houston Rockets",
-    image:"./nba_teams_img/rockets.png",
+    image:"https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg",
+    website:"https://www.nba.com/rockets/",
+    schedule:"https://www.nba.com/rockets/schedule",
 
 },
 {   #12
     name:"Indiana Pacers",
-    image:"./nba_teams_img/pacers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg",
+    website:"https://www.nba.com/pacers/",
+    schedule:"https://www.nba.com/pacers/schedule",
+
 
 },
 {   #13
     name:"Los Angeles Clippers",
-    image:"./nba_teams_img/clippers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg",
+    website:"https://www.nba.com/clippers/",
+    schedule:"https://www.nba.com/clippers/schedule",
 
 },
 {   #14
     name:"Los Angeles Lakers",
-    image:"./nba_teams_img/lakers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg",
+    website:"https://www.nba.com/lakers/",
+    schedule:"https://www.nba.com/clippers/schedule",
 
 },
 {   #15
     name:"Memphis Grizzlies",
-    image:"./nba_teams_img/grizzlies.png",
+    image:"https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg",
+    website:"https://www.nba.com/grizzlies/",
+    schedule:"https://www.nba.com/grizzlies/schedule",
 
 },
 {   #16
     name:"Miami Heat",
-    image:"./nba_teams_img/heat.png",
+    image:"https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg",
+    website:"https://www.nba.com/heat/",
+    schedule:"https://www.nba.com/heat/schedule",
 
 },
 {   #17
     name:"Milwaukee Bucks",
-    image:"./nba_teams_img/bucks.png",
+    image:"https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg",
+    website:"https://www.nba.com/bucks/",
+    schedule:"https://www.nba.com/bucks/schedule",
 
 },
 {   #18
     name:"Minnesota Timberwolves",
-    image:"./nba_teams_img/timberwolves.png",
+    image:"https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg",
+    website:"https://www.nba.com/timberwolves/",
+    schedule:"https://www.nba.com/timberwolves/schedule",
 
 },
 {   #19
     name:"New Orleans Pelicans",
-    image:"./nba_teams_img/pelicans.png",
+    image:"https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg",
+    website:"https://www.nba.com/pelicans/",
+    schedule:"https://www.nba.com/grizzlies/schedule",
 
 },
 {   #20
     name:"New York Knicks",
-    image:"./nba_teams_img/knicks.png",
+    image:"https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg",
+    website:"https://www.nba.com/knicks/",
+    schedule:"https://www.nba.com/knicks/schedule",
 
 },
 {   #21
     name:"Oklahoma City Thunder",
-    image:"./nba_teams_img/thunder.png",
+    image:"https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg",
+    website:"https://www.nba.com/thunder/",
+    schedule:"https://www.nba.com/thunder/schedule",
 
 },
 {   #22
     name:"Orlando Magic",
-    image:"./nba_teams_img/magic.png",
+    image:"https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg",
+    website:"https://www.nba.com/magic/",
+    schedule:"https://www.nba.com/magic/schedule",
 
 },
 {   #23
     name:"Philadelphia 76ers",
-    image:"./nba_teams_img/76ers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg",
+    website:"https://www.nba.com/sixers/",
+    schedule:"https://www.nba.com/sixers/schedule",
 
 },
 {   #24
     name:"Phoenix Suns",
-    image:"./nba_teams_img/suns.png",
+    image:"https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg",
+    website:"https://www.nba.com/suns/",
+    schedule:"https://www.nba.com/suns/schedule",
 
 },
 {   #25
     name:"Portland Trail Blazers",
-    image:"./nba_teams_img/trail_blazers.png",
+    image:"https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg",
+    website:"https://www.nba.com/blazers/",
+    schedule:"https://www.nba.com/blazers/schedule",
 
 },
 {   #26
     name:"Sacramento Kings",
-    image:"./nba_teams_img/kings.png",
+    image:"https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg",
+    website:"https://www.nba.com/kings/",
+    schedule:"https://www.nba.com/kings/schedule",
 
 },
 {   #27
     name:"San Antonio Spurs",
-    image:"./nba_teams_img/spurs.png",
+    image:"https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg",
+    website:"https://www.nba.com/spurs/",
+    schedule:"https://www.nba.com/spurs/schedule",
 
 },
 {   #28
     name:"Toronto Raptors",
-    image:"./nba_teams_img/raptors.png",
+    image:"https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg",
+    website:"https://www.nba.com/raptors/",
+    schedule:"https://www.nba.com/raptors/schedule",
 
 },
 {   #29
     name:"Utah Jazz",
-    image:"./nba_teams_img/jazz.png",
+    image:"https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg",
+    website:"https://www.nba.com/jazz/",
+    schedule:"https://www.nba.com/jazz/schedule",
 
 },
 {   #30
     name:"Washington Wizards",
-    image:"./nba_teams_img/wizzards.png",
+    image:"https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg",
+    website:"https://www.nba.com/wizards/",
+    schedule:"https://www.nba.com/wizards/schedule",
 
 }])
 

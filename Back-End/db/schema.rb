@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2020_12_05_031534) do
   create_table "nba_teams", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.string "website"
+    t.string "schedule"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

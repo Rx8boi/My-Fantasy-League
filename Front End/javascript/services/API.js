@@ -1,14 +1,14 @@
 class API {
     // statick (Class level) function that is also fetch rquest to back end will load all the players
 
-    static addPlayers() {
-        fetch("http://localhost:3000/players")
+    static addTeams() {
+        fetch("http://localhost:3000/nba_teams")
 
         .then(resp => resp.json())
-            .then(players => {
-                players.forEach(player => {
-                    const { id, name, position, fantasy_points, injured, image } = player
-                    new Player(id, name, position, fantasy_points, injured, image)
+            .then(teams => {
+                teams.forEach(team => {
+                    const { id, name, image, website, schedule } = team
+                    new Team(id, name, image, website, schedule)
                 })
             })
     }
