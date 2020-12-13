@@ -1,7 +1,7 @@
 class Team {
-    constructor(id, name, image, website, schedule) {
+    constructor(id, team_name, image, website, schedule) {
         this.id = id
-        this.name = name
+        this.name = team_name
         this.image = image
         this.website = website
         this.schedule = schedule
