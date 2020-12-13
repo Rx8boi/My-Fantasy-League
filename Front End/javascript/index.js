@@ -4,5 +4,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // All fetch requests to back end API. -> API class
     API.addPlayers()
 
-    API.addTeams()
+
 })

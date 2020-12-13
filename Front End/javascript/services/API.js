@@ -3,6 +3,14 @@ class API {
 
     static addPlayers() {
         fetch("http://localhost:3000/players")
-            .then(console.log)
+
+        .then(resp => resp.json())
+            .then(players => {
+                players.forEach(player => {
+                    const { id, name, position, fantasy_points, injured } = player
+                    new Player(id, name, position, fantasy_points, injured)
+                })
+            })
     }
+
 }
