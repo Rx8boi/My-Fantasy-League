@@ -7,8 +7,8 @@ class API {
         .then(resp => resp.json())
             .then(players => {
                 players.forEach(player => {
-                    const { id, name, position, fantasy_points, injured } = player
-                    new Player(id, name, position, fantasy_points, injured)
+                    const { id, name, position, fantasy_points, injured, image } = player
+                    new Player(id, name, position, fantasy_points, injured, image)
                 })
             })
     }
