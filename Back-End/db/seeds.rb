@@ -228,7 +228,7 @@ Player.create([
      fantasy_points: 57,
      injured: [true, false].sample,
      image: "./player_img/simmobe01.jpg",
-     #nba_team_id: NbaTeam.all.sample,
+     nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -237,7 +237,7 @@ Player.create([
      fantasy_points:60,
      image: "./player_img/siakapa01.jpg",
      injured: [true, false].sample,
-     #nba_team_id: NbaTeam.all.sample,
+     nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -246,7 +246,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/bealbr01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -255,7 +255,7 @@ Player.create([
      fantasy_points:66,
      image:"./player_img/tatumja01.jpg",
      injured: [true, false].sample,
-     #nba_team_id: NbaTeam.all.sample,
+     nba_team_id: NbaTeam.all.sample,
 
 },
  {
@@ -264,7 +264,7 @@ Player.create([
      fantasy_points:60,
      image:"./player_img/youngtr01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -273,7 +273,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/westbru01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -282,7 +282,7 @@ Player.create([
      fantasy_points:51,
      image:"./player_img/embiijo01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -291,7 +291,7 @@ Player.create([
      fantasy_points:66,
      image:"./player_img/lillada01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
     
 },
  {
@@ -300,7 +300,7 @@ Player.create([
      fantasy_points:73,
      image:"./player_img/jokicni01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -309,7 +309,7 @@ Player.create([
      fantasy_points:62,
      image:"./player_img/davisan02.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -318,7 +318,7 @@ Player.create([
      fantasy_points:61,
      image:"./player_img/doncilu01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
 {
@@ -327,7 +327,7 @@ Player.create([
      fantasy_points:57,
      image:"./player_img/leonaka01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -336,7 +336,7 @@ Player.create([
      fantasy_points:68,
      image:"./player_img/hardeja01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
  {
@@ -345,7 +345,7 @@ Player.create([
      fantasy_points:63,
      image:"./player_img/antetgi01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 },
 {
@@ -354,7 +354,7 @@ Player.create([
      fantasy_points:67,
      image:"./player_img/jamesle01.jpg",
      injured: [true, false].sample,
-     #nba_team_id:NbaTeam.all.sample,
+     nba_team_id:NbaTeam.all.sample,
 
 }])
 

@@ -23,6 +23,10 @@ class Team {
             // append player container
         teamContainer.innerHTML += this.TeamHTML()
         teamHolder.appendChild(teamContainer)
+        teamContainer.addEventListener("Click", e => {
+            if (e.target.className === "player-button")
+                this.showPlayers(e)
+        })
     }
 
 
@@ -30,13 +34,20 @@ class Team {
     // need instance level method to show HTML all contextual
     TeamHTML() {
 
-        let injury = this.injured == true ? "yes" : "no"
         return `
         <h2 class="Headline">${this.name}</h2>
+        <button type="button" class="player_button" data-id=${this.id}> View Players</button></br>
         <img src = "${this.image}" style="width:150px;height:200px;"></br>
-       <a href="${this.website}">Team Site</a></br>
-       <a href="${this.schedule}">Schedule</a>
+        <a href="${this.website}">Team Site</a></br>
+        <a href="${this.schedule}">Schedule</a>
+
          `
+    }
+
+    showPlayers(e) {
+        //Fetch request to Team page gets => scoped Players
+        // return Players for team selected
+        // show new page with just players & back/forth capabilities (render Teams again)
     }
 
 }
