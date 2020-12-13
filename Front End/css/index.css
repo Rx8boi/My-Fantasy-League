@@ -1,0 +1,10 @@
+body {
+    background: rgb(211, 144, 144);
+    height: 100vh;
+}
+
+@font-face {
+    font-family: SFSportsNight;
+    src: local(./css/font/SFSportsNight.ttf);
+    font-weight: bold;
+}
