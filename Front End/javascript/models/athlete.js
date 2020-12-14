@@ -8,6 +8,6 @@ class Athlete {
         this.injured = injured
         this.image = image
         this.team_id = team_id
-        this.createAthletes()
+
     }
 }

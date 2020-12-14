@@ -1,5 +1,11 @@
 const athlete_list = document.querySelector('.athlete_list');
 const addAthleteForm = document.querySelector('.add-athlete-form');
+const nameValue = document.getElementById('name')
+const positionValue = document.getElementById('position')
+const fantasyValue = document.getElementById('fantasy_points')
+const imageValue = document.getElementById('image')
+const injuredValue = document.getElementById('injured')
+const teamValue = document.getElementById('team_id')
 let output = '';
 
 const renderAthletes = (athletes) => {
@@ -33,18 +39,31 @@ fetch(url)
 //Create - Insert new athlete(player)
 //Method: POST like before
 
-window.onload = function() {
-    addAthleteForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch(url, {
+addAthleteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: {}
+            body: JSON.stringify({
+                name: nameValue.value,
+                position: positionValue.value,
+                fantasy_points: fantasyValue.value,
+                image: imageValue.value,
+                injured: injuredValue.value,
+                team_id: teamValue.value
+            })
         })
-    })
-}
+        .then(res => res.json())
+        .then(data => {
+            const dataArr = [];
+            dataArr.push(data);
+            renderAthletes(dataArr);
+        })
+})
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
