@@ -24,8 +24,8 @@ class Team {
         teamContainer.innerHTML += this.TeamHTML()
         teamHolder.appendChild(teamContainer)
         teamContainer.addEventListener("Click", e => {
-            if (e.target.className === "player-button")
-                this.showPlayers(e)
+            if (e.target.className === "athlete-button")
+                this.createAthlete(e)
         })
     }
 
@@ -36,7 +36,7 @@ class Team {
 
         return `
         <h2 class="Headline">${this.name}</h2>
-        <button type="button" class="player_button" data-id=${this.id}> View Players</button></br>
+        <button type="button" class="athlete_button" data-id=${this.id}> View Athletes</button></br>
         <img src = "${this.image}" style="width:150px;height:200px;"></br>
         <a href="${this.website}">Team Site</a></br>
         <a href="${this.schedule}">Schedule</a>
@@ -44,7 +44,7 @@ class Team {
          `
     }
 
-    showPlayers(e) {
+    createAthlete(e) {
         //Fetch request to Team page gets => scoped Players
         // return Players for team selected
         // show new page with just players & back/forth capabilities (render Teams again)
