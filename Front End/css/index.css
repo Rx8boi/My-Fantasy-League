@@ -1,5 +1,5 @@
 body {
-    background: rgb(211, 144, 144);
+    background: rgb(253, 253, 253);
     height: 100vh;
 }
 
@@ -7,4 +7,20 @@ body {
     font-family: SFSportsNight;
     src: local("./css/font/SFSportsNight.ttf");
     font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 4px;
+    background-color: #2195f300;
+    padding: 8px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: center;
+    text-emphasis: wrap;
+    font-size: 20px;
 }
