@@ -56,7 +56,7 @@ class Team {
         // find the show id from the dataset = e.target.dataset.id
         let id = e.target.dataset.id
             // fetch
-        fetch("http://localhost:3000/shows/${id}/athletes")
+        fetch("http://localhost:3000/teams/${id}/athletes")
             .then(resp => resp.json())
             .then(athletes => {
                 athletes.forEach(team => {
