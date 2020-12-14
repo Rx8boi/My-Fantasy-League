@@ -16,7 +16,7 @@ const renderAthletes = (athletes) => {
                     <div class="card" data-id=${athlete.id}>
                        <h5 class="card-title">${athlete.name}</h5>
                         <img src=${athlete.image} style="width:60px;height:90px;">
-                        <p>${athlete.position}</p>
+                        <p class="pos">${athlete.position}</p>
                         <h6 class="card-subtitle mb-2 text -muted">Fantasy Points: ${athlete.fantasy_points}</h6>
                         <a href="#" class="card-link" id="update-athlete">Update</a>
                         <a href="#" class="card-link" id="delete-athlete" onClick="window.location.reload()">Delete</a>
@@ -55,6 +55,15 @@ athlete_list.addEventListener('click', (e) => {
         })
 
         .then(res => res.json())
+    }
+
+    if (updateButtonIsPressed) {
+        console.log('update athlete')
+        const parent = e.target.parentElement;
+        let nameContent = parent.querySelector('.card-title').textContent;
+        console.log(nameContent) //console log new variable see if we get a name back
+        let positionContent = parent.querySelector('.pos').textContent;
+        console.log(positionContent)
     }
 
 });
