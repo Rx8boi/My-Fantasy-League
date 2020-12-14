@@ -87,18 +87,3 @@ body {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
-.center {
-    margin: auto;
-    width: 40%;
-    border: none;
-    padding: 10px;
-    text-align: center;
-}
-
-.center2 {
-    margin: auto;
-    width: 50%;
-    border: black;
-    padding: 10px;
-}

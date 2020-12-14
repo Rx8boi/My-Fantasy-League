@@ -1,11 +1,12 @@
 const athlete_list = document.querySelector('.athlete_list');
 const addAthleteForm = document.querySelector('.add-athlete-form');
-const nameValue = document.getElementById('name')
-const positionValue = document.getElementById('position')
-const fantasyValue = document.getElementById('fantasy_points')
-const imageValue = document.getElementById('image')
-const injuredValue = document.getElementById('injured')
-const teamValue = document.getElementById('team_id')
+const nameValue = document.getElementById('name');
+const positionValue = document.getElementById('position');
+const fantasyValue = document.getElementById('fantasy_points');
+const imageValue = document.getElementById('image');
+const injuredValue = document.getElementById('injured');
+const teamValue = document.getElementById('team_id');
+const btnSubmit = document.querySelector('.btn');
 
 let output = '';
 
@@ -72,6 +73,22 @@ athlete_list.addEventListener('click', (e) => {
 
     }
 
+    //UPDATE -> PATCH Method
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault(); //was creating multiple records AND updating previous
+        fetch(`${url}/${id}`, {
+                method: "PATCH",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: nameValue.value,
+                    position: positionValue.value,
+                })
+            })
+            .then(res => res.json())
+            .then(() => location.reload())
+    })
 });
 
 
