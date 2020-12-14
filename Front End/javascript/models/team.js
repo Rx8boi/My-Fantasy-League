@@ -38,10 +38,10 @@ class Team {
         <div class="grid-container">
         <div class="grid-item">
         <h2 class="Headline">${this.name}</h2>
-        <button type="button" class="athlete_button" data-id=${this.id}> View Athletes</button></br>
-        <img src = "${this.image}" style="width:50px;height:100px;"></br>
-        <a href="${this.website}">Team Site</a></br>
-        <a href="${this.schedule}">Schedule</a>
+        <a href="${this.website}">Team Site</a>
+        <a href="${this.schedule}">Schedule</a></br>
+        <img src = "${this.image}" style="width:70px;height:110px;"></br>
+
         </div></div>
          `
     }
