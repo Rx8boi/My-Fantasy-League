@@ -13,9 +13,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <h1 align="center">My Fantasy League App</h1>
+    <div class="center2">
+        <h1>My Fantasy League App</h1>
+    </div>
 
     <style>
+        body {
+            background-color: #f2f2f2;
+            ;
+        }
+        
+        .center {
+            margin: auto;
+            width: 40%;
+            border: none;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .center2 {
+            margin: auto;
+            width: 34%;
+            padding: 10px;
+        }
+        
+        .center3 {
+            margin: auto;
+            width: 70%;
+            padding: 0px;
+            text-align: end;
+        }
+        
         ul {
             list-style-type: none;
             margin: 0;
@@ -52,13 +80,13 @@
         /* Left and right column */
         
         .column.side {
-            width: 30%;
+            width: 15%;
             text-align: center;
         }
         /* Middle column */
         
         .column.middle {
-            width: 40%;
+            width: 50%;
         }
         /* Clear floats after the columns */
         
@@ -74,6 +102,72 @@
             .column.middle {
                 width: 100%;
             }
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=number],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=checkbox],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=url],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        div {
+            border-radius: 15px;
+            background-color: #f2f2f2;
+            padding: 25px;
+            align-content: justify;
         }
     </style>
 
@@ -98,8 +192,8 @@
 
         <h2>View an Athlete on your team</h2>
         <form action="http://localhost:3000/athletes/${id}">
-            <label for="athlete">Choose an athlete:</label>
-            <select name="athlete" id="athlete_name">
+            <label for="athlete"></label>
+            <select name="athlete" id="athlete_name" aria-placeholder="Player">
                      <option value="Ben Simmons">Ben Simmons</option>
                      <option value="Pascal Siakam">Pascal Siakam</option>
                      <option value="Bradley Beal">Bradley Beal</option>
@@ -123,19 +217,19 @@
         </br>
         <h2>Add a player to a team</h2>
         <form class="add-athlete-form">
-            <label for="athlete">Athlete Name: </label>
-            <input type="text" class="form-control" id="name">
-            </br> <label for="athlete">Position: </label>
-            <input type="text" class="form-control" id="position">
-            </br><label for="athlete">Picture: </label>
-            <input type="url" class="form-control" id="image">
-            </br><label for="athlete">Fantasy Points: </label>
-            <input type="number" class="form-control" id="fantasy_points">
-            </br><label for="athlete">Team: </label>
-            <input type="number" class="form-control" id="team_id">
+            <label for="athlete"></label>
+            <input type="text" class="form-control" id="name" placeholder="Athlete Name">
+            </br> <label for="athlete"></label>
+            <input type="text" class="form-control" id="position" placeholder="Position">
+            </br><label for="athlete"></label>
+            <input type="url" class="form-control" id="image" placeholder="Picutre">
+            </br><label for="athlete"></label>
+            <input type="number" class="form-control" id="fantasy_points" placeholder="Fantasy Points">
+            </br><label for="athlete"></label>
+            <input type="number" class="form-control" id="team_id" placeholder="Team">
             </br><label for="athlete">Injured: </label>
             <input type="checkbox" class="form-control" id="injured">
-            </br><button type="submit" class="btn class">Create!</button>
+            </br><button class="button" type="submit">Create!</button>
         </form>
         </br>
 
@@ -148,7 +242,9 @@
     </br>
 
     <div class="column middle">
-        <H2 align="center">NBA Teams</H2>
+        <div class="center">
+            <h2> NBA Teams</H2>
+        </div>
         </br>
         <div id="team_list" class="grid-container"></div>
     </div>
@@ -157,9 +253,10 @@
         </br>
         </br>
         </br>
-        <h2>Current Athletes</h2>
-        <div class="athlete_list"></div>
-
+        <div class="center3">
+            <h2>Current Athletes</h2>
+            <div class="athlete_list grid-container2"></div>
+        </div>
 
     </div>
     </div>
