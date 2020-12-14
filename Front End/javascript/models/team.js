@@ -24,8 +24,8 @@ class Team {
         teamContainer.innerHTML += this.TeamHTML()
         teamHolder.appendChild(teamContainer)
         teamContainer.addEventListener("Click", e => {
-            if (e.target.className === "athlete-button")
-                this.createAthlete(e)
+            if (e.target.className === "athlete_button")
+                this.createAthletes(e)
         })
     }
 
@@ -46,21 +46,27 @@ class Team {
          `
     }
 
-    createAthlete(e) {
+
+    createAthletes(e) {
+        debugger
         //Fetch request to Team page gets => scoped Players
         // return Players for team selected
         // show new page with just players & back/forth capabilities (render Teams again)
         //best place for event listener
+        // find the show id from the dataset = e.target.dataset.id
         let id = e.target.dataset.id
-        fetch("http://localhost:3000/teams/${id}/athletes")
-
-        .then(resp => resp.json())
-            .then(athlete => {
-                athlete.forEach(athlete => {
+            // fetch
+        fetch("http://localhost:3000/shows/${id}/athletes")
+            .then(resp => resp.json())
+            .then(athletes => {
+                athletes.forEach(team => {
                     const { id, name, position, fantasy_points, injured, image, team_id } = athlete
+                    // create our new associated muppet objects
                     new Athlete(id, name, position, fantasy_points, injured, image, team_id)
                 })
             })
     }
+
+
 
 }
