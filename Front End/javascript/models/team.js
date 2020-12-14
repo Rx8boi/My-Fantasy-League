@@ -39,7 +39,7 @@ class Team {
         <div class="grid-item">
         <h2 class="Headline">${this.name}</h2>
         <button type="button" class="athlete_button" data-id=${this.id}> View Athletes</button></br>
-        <img src = "${this.image}" style="width:150px;height:200px;"></br>
+        <img src = "${this.image}" style="width:50px;height:100px;"></br>
         <a href="${this.website}">Team Site</a></br>
         <a href="${this.schedule}">Schedule</a>
         </div></div>

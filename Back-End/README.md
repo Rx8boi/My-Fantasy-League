@@ -21,3 +21,19 @@ Limit of 5 players to start
 Players - Name > String - Team > String - Fantasy Team ID - Points > Integer - Injured? > Boolean - Image
 
 NBA Team - Has logo
+
+create_table :players do |t|
+:name
+:position
+:fantasy_points
+:injured
+:image
+:team_id
+
+    create_table :teams do |t|
+       :name
+       :image
+       :website
+       :schedule
+
+
