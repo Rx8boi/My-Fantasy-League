@@ -49,6 +49,18 @@ class Team {
         // return Players for team selected
         // show new page with just players & back/forth capabilities (render Teams again)
         //best place for event listener
+
+        fetch("http://localhost:3000/athletes")
+
+        .then(resp => resp.json())
+            .then(teams => {
+                teams.forEach(team => {
+                    const { id, team_name, image, website, schedule } = team
+                    new Team(id, team_name, image, website, schedule)
+                })
+            })
     }
+
+}
 
 }
