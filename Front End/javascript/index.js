@@ -11,10 +11,11 @@ fetch(url)
         data.forEach(athlete => {
             output += `
                 <div class="card mt-4 col-md-6 bg-dark">
-                    <div class="card-body">
-                        <h5 class="card-title">Athlete Name:</h5>
-                        <h6 class="card-subtitle mb-2 text -muted"> Position:</h6>
-                        <h6 class="card-subtitle mb-2 text -muted"> Fantasy Points:</h6>
+                    <div class="card">
+                       <h5 class="card-title">${athlete.name}</h5>
+                        <img src=${athlete.image} style="width:60px;height:90px;">
+                        <p>${athlete.position}</p>
+                        <h6 class="card-subtitle mb-2 text -muted">Fantasy Points: ${athlete.fantasy_points}</h6>
                         <a href="#" class="card-link">Update</a>
                         <a href="#" class="card-link">Delete</a>
                     </div>
