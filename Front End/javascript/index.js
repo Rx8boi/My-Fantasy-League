@@ -1,15 +1,10 @@
 const athlete_list = document.querySelector('.athlete_list');
+const addAthleteForm = document.querySelector('.add-athlete-form');
 let output = '';
 
-
-const url = "http://localhost:3000/athletes";
-// fetch request -> return promise
-
-fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(athlete => {
-            output += `
+const renderAthletes = (athletes) => {
+    athletes.forEach(athlete => {
+        output += `
                 <div class="card mt-4 col-md-6 bg-dark">
                     <div class="card">
                        <h5 class="card-title">${athlete.name}</h5>
@@ -23,10 +18,34 @@ fetch(url)
                 </div>
 
             `;
-        });
-
-        athlete_list.innerHTML = output;
     });
+
+    athlete_list.innerHTML = output;
+}
+
+const url = "http://localhost:3000/athletes";
+// fetch request -> return promise
+
+fetch(url)
+    .then(res => res.json())
+    .then(data => renderAthletes(data))
+
+//Create - Insert new athlete(player)
+//Method: POST like before
+
+window.onload = function() {
+    addAthleteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: {}
+        })
+    })
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // need to load in "undrafted players"
