@@ -19,7 +19,7 @@ class Team {
         const teamContainer = document.createElement('div')
         teamContainer.dataset.id = this.id
         teamContainer.id = this.id
-        teamContainer.classList.add = "team_players_list"
+        teamContainer.classList.add = "team_athlete_list"
             // append player container
         teamContainer.innerHTML += this.TeamHTML()
         teamHolder.appendChild(teamContainer)
@@ -53,14 +53,12 @@ class Team {
         fetch("http://localhost:3000/athletes")
 
         .then(resp => resp.json())
-            .then(teams => {
-                teams.forEach(team => {
-                    const { id, team_name, image, website, schedule } = team
-                    new Team(id, team_name, image, website, schedule)
+            .then(athlete => {
+                athlete.forEach(athlete => {
+                    const { id, name, position, fantasy_points, injured, image, team_id } = athlete
+                    new Athlete(id, name, position, fantasy_points, injured, image, team_id)
                 })
             })
     }
-
-}
 
 }
