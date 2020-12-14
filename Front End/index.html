@@ -87,40 +87,14 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="column side">
-            <h2>Add a player to a team</h2>
-            <label for="athlete">Athlete Name: </label>
-            <input type="text" class="form-control" id="name">
-            </br> <label for="athlete">Position: </label>
-            <input type="text" class="form-control" id="position">
-            </br><label for="athlete">Fantasy Points: </label>
-            <input type="number" class="form-control" id="fantasy_points">
-            </br><label for="athlete">Picture: </label>
-            <input type="url" class="form-control" id="image">
-            </br><button type="submit" class="btn class">Create!</button>
-            <div class="athlete_list">
-                <div class="card mt-4 col-md-6 bg-dark">
-                    <div class="card-body">
-                        <h5 class="card-title">Athlete Name:</h5>
-                        <h6 class="card-subtitle mb-2 text -muted"> Position:</h6>
-                        <h6 class="card-subtitle mb-2 text -muted"> Fantasy Points:</h6>
-                        <a href="#" class="card-link">Update</a>
-                        <a href="#" class="card-link">Delete</a>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-        <div class="column middle">
-            <H2 align="center">NBA Teams</H2>
-            <div id="team_list" class="grid-container"></div>
-        </div>
-        <div class="column side">
-            <h2>View an Athlete on your team</h2>
-            <form action="http://localhost:3000/athletes/${id}">
-                <label for="athlete">Choose an athlete:</label>
-                <select name="athlete" id="athlete_name">
+
+    <div class="column side">
+        </br>
+        <h2>View an Athlete on your team</h2>
+        <form action="http://localhost:3000/athletes/${id}">
+            <label for="athlete">Choose an athlete:</label>
+            <select name="athlete" id="athlete_name">
                      <option value="Ben Simmons">Ben Simmons</option>
                      <option value="Pascal Siakam">Pascal Siakam</option>
                      <option value="Bradley Beal">Bradley Beal</option>
@@ -137,10 +111,41 @@
                      <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
                      <option value="LeBron James">LeBron James</option>
                      </select>
-                <br><br>
-                <input type="submit" value="Submit">
-            </form>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        </br>
+        <h2>Add a player to a team</h2>
+        <label for="athlete">Athlete Name: </label>
+        <input type="text" class="form-control" id="name">
+        </br> <label for="athlete">Position: </label>
+        <input type="text" class="form-control" id="position">
+        </br><label for="athlete">Fantasy Points: </label>
+        <input type="number" class="form-control" id="fantasy_points">
+        </br><label for="athlete">Picture: </label>
+        <input type="url" class="form-control" id="image">
+        </br><button type="submit" class="btn class">Create!</button>
+        </br>
+
+        <div class="row">
+
         </div>
+    </div>
+    </div>
+    </div>
+    </br>
+
+    <div class="column middle">
+        <H2 text-align="center">NBA Teams</H2>
+        </br>
+        <div id="team_list" class="grid-container"></div>
+    </div>
+    <div class="column side">
+        <h2>Current Athletes</h2>
+        <div class="athlete_list"></div>
+
+
+    </div>
     </div>
 
 
