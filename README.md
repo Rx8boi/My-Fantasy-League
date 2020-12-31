@@ -1,26 +1,11 @@
 # My Fantasy League
+# Front-END
+Fantasy League for when you're ready for game time. 
+NBA support with future NFL updates
 
-Fantasy League for when you're ready for game time. NBA support with future NFL updates
+You can create players based on their team_id.
+Each player has position, fantasy points, name & picture attributes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-- Ruby version
-
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+Database API located here:
+https://github.com/Rx8boi/nba-backend
