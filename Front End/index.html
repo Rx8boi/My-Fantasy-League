@@ -13,8 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <div class="center2">
-        <h1>My Fantasy League App</h1>
+    <div class="center">
+        <h1>My NBA Fantasy League</h1>
+        </h3> v.1.02</h3>
     </div>
 
     <style>
@@ -163,6 +164,21 @@
             background-color: #45a049;
         }
         
+        input[type=reset] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=reset]:hover {
+            background-color: #45a049;
+        }
+        
         div {
             border-radius: 15px;
             background-color: #f2f2f2;
@@ -172,27 +188,32 @@
     </style>
 
     <div class="tab">
-        <button class="tablinks" onclick="openView(event, 'Home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openView(event, 'home')" id="defaultOpen">Home</button>
         <button class="tablinks" onclick="openView(event, 'teams')">Teams</button>
-        <button class="tablinks" onclick="openView(event, 'Athletes')">Athletes</button>
-        <button class="tablinks" onclick="openView(event, 'Create a Player')">Create a Player</button>
+        <button class="tablinks" onclick="openView(event, 'roster')">Roster</button>
+        <button class="tablinks" onclick="openView(event, 'viewPlayer')">View a Player</button>
+        <button class="tablinks" onclick="openView(event, 'createPlayer')">Create a Player</button>
     </div>
 </head>
 <!-- Tab content -->
 
 <body>
-    <div id="Home" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
+    <div id="home" class="tabcontent">
+        <div class="center">
+            <img src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png" alt="Trulli" width="500" height="333">
+            <h1>Welcome Future GM!</h1>
+            <h3>Please select a tab to start builing your roster</h3>
+        </div>
     </div>
 
     <div id="teams" class="tabcontent">
-        <h3>Team List</h3>
-        <p>The 30 NBA teams</p>
+        <div class="center">
+            <h1>The 30 Current Teams</h1>
+        </div>
         <div id="team_list" class="grid-container"></div>
     </div>
 
-    <div id="Create a Player" class="tabcontent">
+    <div id="createPlayer" class="tabcontent">
         </br>
         </br>
         <h2>Add a player to a team</h2>
@@ -207,16 +228,48 @@
             <input type="number" class="form-control" id="fantasy_points" placeholder="Fantasy Points">
             </br><label for="athlete"></label>
             <input type="number" min="0" max="30" step="1" oninput="validity.valid||(value='');" class="form-control" id="team_id" placeholder="Team">
-            </br><label for="athlete">Injured: </label>
-            <input type="checkbox" class="form-control" id="injured">
-            </br><button class="button btn" type="submit">Create!</button>
+            <div class="center">
+
+                <label for="athlete"><h3>Injured:</label>
+                <input type="checkbox" class="form-control" id="injured" position="left"></h3>
+            </div>
+            <button class="button btn" type="submit">Create!</button>
+            </br><button class="button btn" type="reset">Reset</button>
         </form>
         </br>
     </div>
-    <div id="Athletes" class="tabcontent">
+    <div id="roster" class="tabcontent">
+        <div class="center">
+            <h1>Current Players on your Team</h1>
+        </div>
         <div class="athlete_list grid-container">
         </div>
     </div>
+
+    <script>
+        function openView(evt, pageName) {
+            // Declare all variables
+            let i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(pageName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
 
     <script type="text/javascript" src="javascript/index.js"></script>
 </body>
