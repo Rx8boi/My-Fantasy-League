@@ -20,7 +20,7 @@ const renderAthletes = (athletes) => {
                         <p class="pos">${athlete.position}</p>
                         <h6 class="card-subtitle mb-2 text -muted">Fantasy Points: ${athlete.fantasy_points}</h6>
                         <a href="#" class="card-link" id="update-athlete">Update</a>
-                        <a href="#" class="card-link" id="delete-athlete" onClick="window.location.reload()">Delete</a>
+                        <a href="#" class="card-link" id="delete-athlete">Delete</a>
                     </div>
                 </div>
 
@@ -45,9 +45,9 @@ athlete_list.addEventListener('click', (e) => {
     let delButtonIsPressed = e.target.id == 'delete-athlete';
     let updateButtonIsPressed = e.target.id == 'update-athlete';
     let id = e.target.parentElement.dataset.id;
-    //how do i grab specific Athlete ID???
-    //console.log(e.target.parentElement.dataset.id);
 
+    //how do i grab specific Athlete ID???
+    console.log(e.target.parentElement.dataset.id)
     if (delButtonIsPressed) {
         //console.log('remove athlete')
         fetch(`${url}/${id}`, {
@@ -55,6 +55,7 @@ athlete_list.addEventListener('click', (e) => {
         })
 
         .then(res => res.json())
+        e.target.parentElement.parentElement.remove()
     }
 
     if (updateButtonIsPressed) {
@@ -86,7 +87,7 @@ athlete_list.addEventListener('click', (e) => {
                 })
             })
             .then(res => res.json())
-            .then(() => location.reload())
+            .then(data => renderAthletes(data))
     })
 });
 
