@@ -171,54 +171,28 @@
         }
     </style>
 
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#createteam">Create Your Team</a></li>
-        <li><a href="#athlete">Players</a></li>
-        <li><a href="#teams">Teams</a></li>
-    </ul>
-
+    <div class="tab">
+        <button class="tablinks" onclick="openView(event, 'Home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openView(event, 'teams')">Teams</button>
+        <button class="tablinks" onclick="openView(event, 'Athletes')">Athletes</button>
+        <button class="tablinks" onclick="openView(event, 'Create a Player')">Create a Player</button>
+    </div>
 </head>
+<!-- Tab content -->
 
 <body>
+    <div id="Home" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
 
+    <div id="teams" class="tabcontent">
+        <h3>Team List</h3>
+        <p>The 30 NBA teams</p>
+        <div id="team_list" class="grid-container"></div>
+    </div>
 
-    <div class="column side">
-        </br>
-        </br>
-        </br>
-        </br>
-        </br>
-
-        <h2>View an Athlete on your team</h2>
-        <form>
-            <label for="athlete"></label>
-            <select name="athlete" id="athlete_name" aria-placeholder="Player">
-                     <option value="Ben Simmons">Ben Simmons</option>
-                     <option value="Pascal Siakam">Pascal Siakam</option>
-                     <option value="Bradley Beal">Bradley Beal</option>
-                     <option value="Jayson Tatum">Jayson Tatum</option>
-                     <option value="Trae Young">Trae Young</option>
-                     <option value="Russell Westbrook">Russell Westbrook</option>
-                     <option value="Joel Embiid">Joel Embiid</option>
-                     <option value="Damian Lillard">Damian Lillard</option>
-                     <option value="Nikola Jokic">Nikola Jokic</option>
-                     <option value="Anthony Davis">Anthony Davis</option>
-                     <option value="Luka Doncic">Luka Doncic</option>
-                     <option value="Kawhi Leonard">Kawhi Leonard</option>
-                     <option value="James Harden">James Harden</option>
-                     <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
-                     <option value="LeBron James">LeBron James</option>
-                     </select>
-            <br><br>
-            <button class="button" onclick="myFunction()">View</button>
-
-            <script>
-                function myFunction() {
-                    alert("ERROR 52105-P3:THIS APPLICATION FEATURE IS NOT YET AVAILABLE!");
-                }
-            </script>
-        </form>
+    <div id="Create a Player" class="tabcontent">
         </br>
         </br>
         <h2>Add a player to a team</h2>
@@ -232,42 +206,17 @@
             </br><label for="athlete"></label>
             <input type="number" class="form-control" id="fantasy_points" placeholder="Fantasy Points">
             </br><label for="athlete"></label>
-            <input type="number" class="form-control" id="team_id" placeholder="Team">
+            <input type="number" min="0" max="30" step="1" oninput="validity.valid||(value='');" class="form-control" id="team_id" placeholder="Team">
             </br><label for="athlete">Injured: </label>
             <input type="checkbox" class="form-control" id="injured">
             </br><button class="button btn" type="submit">Create!</button>
         </form>
         </br>
-
-        <div class="row">
-
+    </div>
+    <div id="Athletes" class="tabcontent">
+        <div class="athlete_list grid-container">
         </div>
     </div>
-    </div>
-    </div>
-    </br>
-
-    <div class="column middle">
-        <div class="center">
-            <h2> NBA Teams</H2>
-        </div>
-        </br>
-        <div id="team_list" class="grid-container"></div>
-    </div>
-    <div class="column side">
-        </br>
-        </br>
-        </br>
-        </br>
-        <div class="center3">
-            <h2>Current Athletes</h2>
-            <div class="athlete_list grid-container2"></div>
-        </div>
-
-    </div>
-    </div>
-
-
 
     <script type="text/javascript" src="javascript/index.js"></script>
 </body>
