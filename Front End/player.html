@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>My NBA Fantasy League</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="javascript/models/team.js"></script>
+    <script type="text/javascript" src="javascript/models/athlete.js"></script>
+    <script type="text/javascript" src="javascript/services/API.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div class="center">
+        <h1>My NBA Fantasy League</h1>
+        </h3> v.1.02</h3>
+    </div>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            ;
+        }
+        
+        .center {
+            margin: auto;
+            width: 40%;
+            border: none;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .center2 {
+            margin: auto;
+            width: 34%;
+            padding: 10px;
+        }
+        
+        .center3 {
+            margin: auto;
+            width: 70%;
+            padding: 0px;
+            text-align: end;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        /* Create three unequal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            padding: 0px;
+        }
+        /* Left and right column */
+        
+        .column.side {
+            width: 15%;
+            text-align: center;
+        }
+        /* Middle column */
+        
+        .column.middle {
+            width: 50%;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .column.side,
+            .column.middle {
+                width: 100%;
+            }
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=number],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=checkbox],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=url],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        input[type=reset] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=reset]:hover {
+            background-color: #45a049;
+        }
+        
+        div {
+            border-radius: 15px;
+            background-color: #f2f2f2;
+            padding: 25px;
+            align-content: justify;
+        }
+    </style>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openView(event, 'home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openView(event, 'teams')">Teams</button>
+        <button class="tablinks" onclick="openView(event, 'roster')">Roster</button>
+        <button class="tablinks" onclick="openView(event, 'viewPlayer')">View a Player</button>
+        <button class="tablinks" onclick="openView(event, 'createPlayer')">Create a Player</button>
+    </div>
+</head>
+<!-- Tab content -->
+
+<body>
+    <div id="home" class="tabcontent">
+        <div class="center">
+            <img src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png" alt="Trulli" width="500" height="333">
+            <h1>Welcome Future GM!</h1>
+            <h3>Please select a tab to start builing your roster</h3>
+        </div>
+    </div>
+
+    <div id="teams" class="tabcontent">
+        <div class="center">
+            <h1>The 30 Current Teams</h1>
+        </div>
+        <div id="team_list" class="grid-container"></div>
+    </div>
+
+    <div id="createPlayer" class="tabcontent">
+        </br>
+        <div class="center">
+            <h1>Add a player to your roster</h1>
+            <form class="add-athlete-form">
+                <label for="athlete"></label>
+                <input type="text" class="form-control" id="name" placeholder="Athlete Name">
+                </br> <label for="athlete"></label>
+                <input type="text" class="form-control" id="position" placeholder="Position">
+                </br><label for="athlete"></label>
+                <input type="url" class="form-control" id="image" placeholder="Picutre">
+                </br><label for="athlete"></label>
+                <input type="number" class="form-control" id="fantasy_points" placeholder="Fantasy Points">
+                </br><label for="athlete"></label>
+                <input type="number" min="0" max="30" step="1" oninput="validity.valid||(value='');" class="form-control" id="team_id" placeholder="Team">
+                <div class="center">
+
+                    <label for="athlete"><h2>Injured:</label>
+                    <input type="checkbox" class="form-control" id="injured" position="left"></h2>
+                </div>
+                <button class="button btn" type="submit">Create!</button>
+                </br><button class="button btn" type="reset">Reset</button>
+            </form>
+        </div>
+        </br>
+    </div>
+
+    <div id="roster" class="tabcontent">
+        <div class="center">
+            <h1>Current players on your roster</h1>
+        </div>
+        <div class="athlete_list grid-container">
+        </div>
+    </div>
+
+    <div id="viewPlayer" class="tabcontent">
+        <div class="center">
+            <h1>View players on your roster</h1>
+
+            <form>
+                <label for="athlete"></label>
+                <select name="athlete" id="athlete_name" aria-placeholder="Player">
+                     <option value="Ben Simmons">Ben Simmons</option>
+                     <option value="Pascal Siakam">Pascal Siakam</option>
+                     <option value="Bradley Beal">Bradley Beal</option>
+                     <option value="Jayson Tatum">Jayson Tatum</option>
+                     <option value="Trae Young">Trae Young</option>
+                     <option value="Russell Westbrook">Russell Westbrook</option>
+                     <option value="Joel Embiid">Joel Embiid</option>
+                     <option value="Damian Lillard">Damian Lillard</option>
+                     <option value="Nikola Jokic">Nikola Jokic</option>
+                     <option value="Anthony Davis">Anthony Davis</option>
+                     <option value="Luka Doncic">Luka Doncic</option>
+                     <option value="Kawhi Leonard">Kawhi Leonard</option>
+                     <option value="James Harden">James Harden</option>
+                     <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
+                     <option value="LeBron James">LeBron James</option>
+                     </select>
+                <br><br>
+                <button class="button" onclick="myFunction()">View</button>
+        </div>
+    </div>
+
+    <script>
+        function openView(evt, pageName) {
+            // Declare all variables
+            let i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(pageName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>

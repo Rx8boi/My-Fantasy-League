@@ -47,26 +47,26 @@ class Team {
     }
 
 
-    createAthletes(e) {
-        debugger
+    //createAthletes(e) {
+      //  debugger
         //Fetch request to Team page gets => scoped Players
         // return Players for team selected
         // show new page with just players & back/forth capabilities (render Teams again)
         //best place for event listener
         // find the show id from the dataset = e.target.dataset.id
-        let id = e.target.dataset.id
+    //    let id = e.target.dataset.id
             // fetch
-        fetch("http://localhost:3000/teams/${id}/athletes")
-            .then(resp => resp.json())
-            .then(athletes => {
-                athletes.forEach(team => {
-                    const { id, name, position, fantasy_points, injured, image, team_id } = athlete
+    //    fetch("http://localhost:3000/teams/${id}/athletes")
+    //        .then(resp => resp.json())
+   // //        .then(athletes => {
+     //           athletes.forEach(team => {
+    //                const { id, name, position, fantasy_points, injured, image, team_id } = athlete
                     // create our new associated muppet objects
-                    new Athlete(id, name, position, fantasy_points, injured, image, team_id)
-                })
-            })
-    }
+     //               new Athlete(id, name, position, fantasy_points, injured, image, team_id)
+                }
+    //        })
+    //}
 
 
 
-}
+//}

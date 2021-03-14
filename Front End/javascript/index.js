@@ -56,7 +56,7 @@ athlete_list.addEventListener('click', (e) => {
 
         .then(res => res.json())
         e.target.parentElement.parentElement.remove()
-    }
+    },
 
     if (updateButtonIsPressed) {
         console.log('update athlete')
@@ -87,7 +87,7 @@ athlete_list.addEventListener('click', (e) => {
                 })
             })
             .then(res => res.json())
-            .then(data => renderAthletes(data))
+
     })
 });
 

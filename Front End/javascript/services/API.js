@@ -13,4 +13,8 @@ class API {
             })
     }
 
+    static addPlayer
+
+
+
 }
