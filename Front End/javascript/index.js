@@ -32,7 +32,7 @@ const renderAthletes = (athletes) => {
 
 const url = "http://localhost:3000/athletes";
 // fetch request -> return promise
-
+console.log(url)
 fetch(url)
     .then(res => res.json())
     .then(data => renderAthletes(data))
@@ -56,7 +56,7 @@ athlete_list.addEventListener('click', (e) => {
 
         .then(res => res.json())
         e.target.parentElement.parentElement.remove()
-    },
+    }
 
     if (updateButtonIsPressed) {
         console.log('update athlete')
